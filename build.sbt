@@ -44,6 +44,7 @@ lazy val slf4s =
         // Logging
         library.slf4jApi,
         // Testing
+        library.logback         % Test,
         library.mockitoCore     % Test,
         library.munit           % Test,
         library.munitScalaCheck % Test,
@@ -71,6 +72,7 @@ lazy val library =
   new {
     object Version {
       val log4j   = "2.14.0"
+      val logback = "1.2.3"
       val mockito = "3.7.7"
       val munit   = "0.7.26"
       val slf4j   = "1.7.30"
@@ -78,6 +80,7 @@ lazy val library =
     // Logging
     val slf4jApi = "org.slf4j" % "slf4j-api" % Version.slf4j
     // Testing
+    val logback         = "ch.qos.logback" % "logback-classic"  % Version.logback
     val mockitoCore     = "org.mockito"    % "mockito-core"     % Version.mockito
     val munit           = "org.scalameta" %% "munit"            % Version.munit
     val munitScalaCheck = "org.scalameta" %% "munit-scalacheck" % Version.munit
