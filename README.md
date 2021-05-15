@@ -4,7 +4,7 @@
 ![Maven Central](https://img.shields.io/maven-central/v/rocks.heikoseeberger/slf4s)
 
 slf4s is a library providing convenient and performant logging for Scala 3. It piggybacks on
-[SLF4S](http://www.slf4j.org/) and it automagically applies the check-enabled-idiom thanks to
+[SLF4J](http://www.slf4j.org/) and it automagically applies the check-enabled-idiom thanks to
 Scala 3 metaprogramming.
 
 In a nutshell, you can invoke logging methods like `info` without checking whether the respective
