@@ -13,7 +13,7 @@ inThisBuild(
       Developer(
         "hseeberger",
         "Heiko Seeberger",
-        "mail@heikoseeberger.de",
+        "mail@heikoseeberger.rocks",
         url("https://github.com/hseeberger")
       )
     ),
