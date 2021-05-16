@@ -28,9 +28,8 @@ final class Logger (u: Underlying):
    * [[Logger]] wrapping a SLF4J logger named as given with a potential trailing "$" stripped off.
    * @param name [[Logger]] name
    */
-  def this(name: String) = {
+  def this(name: String) =
     this(LoggerFactory.getLogger(Logger.stripTrailingDollar(name)))
-}
 
   /**
    * [[Logger]] wrapping a Log4j logger named according to the given `Class` with a potential
