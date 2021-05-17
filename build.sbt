@@ -21,8 +21,9 @@ inThisBuild(
     scalacOptions ++= Seq(
       "-unchecked",
       "-deprecation",
-      "-encoding",
-      "UTF-8",
+      "-Xfatal-warnings",
+      "-rewrite",
+      "-new-syntax",
     ),
     testFrameworks += new TestFramework("munit.Framework"),
     scalafmtOnCompile := false, // TODO set to true once working for Scala 3!

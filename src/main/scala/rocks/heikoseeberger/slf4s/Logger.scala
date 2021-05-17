@@ -51,7 +51,7 @@ final class Logger (u: Underlying):
    * @param message Log message; only constructed, if `ERROR` level enabled.
    */
   inline def error(message: => String): Unit =
-    if (u.isErrorEnabled) u.error(message)
+    if u.isErrorEnabled then u.error(message)
 
   /**
    * Logs at `ERROR` level, if enabled.
@@ -59,7 +59,7 @@ final class Logger (u: Underlying):
    * @param t `Throwable` to be logged
    */
   inline def error(message: => String, t: Throwable): Unit =
-    if (u.isErrorEnabled) u.error(message, t)
+    if u.isErrorEnabled then u.error(message, t)
 
   /**
    * Logs at `ERROR` level, if enabled.
@@ -67,7 +67,7 @@ final class Logger (u: Underlying):
    * @param message Log message; only constructed, if `ERROR` level enabled.
    */
   inline def error(marker: Marker, message: => String): Unit =
-    if (u.isErrorEnabled(marker)) u.error(marker, message)
+    if u.isErrorEnabled(marker) then u.error(marker, message)
 
   /**
    * Logs at `ERROR` level, if enabled.
@@ -76,14 +76,14 @@ final class Logger (u: Underlying):
    * @param t `Throwable` to be logged.
    */
   inline def error(marker: Marker, message: => String, t: Throwable): Unit =
-    if (u.isErrorEnabled(marker)) u.error(marker, message, t)
+    if u.isErrorEnabled(marker) then u.error(marker, message, t)
 
   /**
    * Logs at `WARN` level, if enabled.
    * @param message Log message; only constructed, if `WARN` level enabled.
    */
   inline def warn(message: => String): Unit =
-    if (u.isWarnEnabled) u.warn(message)
+    if u.isWarnEnabled then u.warn(message)
 
   /**
    * Logs at `WARN` level, if enabled.
@@ -91,7 +91,7 @@ final class Logger (u: Underlying):
    * @param t `Throwable` to be logged
    */
   inline def warn(message: => String, t: Throwable): Unit =
-    if (u.isWarnEnabled) u.warn(message, t)
+    if u.isWarnEnabled then u.warn(message, t)
 
   /**
    * Logs at `WARN` level, if enabled.
@@ -99,7 +99,7 @@ final class Logger (u: Underlying):
    * @param message Log message; only constructed, if `WARN` level enabled.
    */
   inline def warn(marker: Marker, message: => String): Unit =
-    if (u.isWarnEnabled(marker)) u.warn(marker, message)
+    if u.isWarnEnabled(marker) then u.warn(marker, message)
 
   /**
    * Logs at `WARN` level, if enabled.
@@ -108,14 +108,14 @@ final class Logger (u: Underlying):
    * @param t `Throwable` to be logged.
    */
   inline def warn(marker: Marker, message: => String, t: Throwable): Unit =
-    if (u.isWarnEnabled(marker)) u.warn(marker, message, t)
+    if u.isWarnEnabled(marker) then u.warn(marker, message, t)
 
   /**
    * Logs at `INFO` level, if enabled.
    * @param message Log message; only constructed, if `INFO` level enabled.
    */
   inline def info(message: => String): Unit =
-    if (u.isInfoEnabled) u.info(message)
+    if u.isInfoEnabled then u.info(message)
 
   /**
    * Logs at `INFO` level, if enabled.
@@ -123,7 +123,7 @@ final class Logger (u: Underlying):
    * @param t `Throwable` to be logged
    */
   inline def info(message: => String, t: Throwable): Unit =
-    if (u.isInfoEnabled) u.info(message, t)
+    if u.isInfoEnabled then u.info(message, t)
 
   /**
    * Logs at `INFO` level, if enabled.
@@ -131,7 +131,7 @@ final class Logger (u: Underlying):
    * @param message Log message; only constructed, if `INFO` level enabled.
    */
   inline def info(marker: Marker, message: => String): Unit =
-    if (u.isInfoEnabled(marker)) u.info(marker, message)
+    if u.isInfoEnabled(marker) then u.info(marker, message)
 
   /**
    * Logs at `INFO` level, if enabled.
@@ -140,14 +140,14 @@ final class Logger (u: Underlying):
    * @param t `Throwable` to be logged.
    */
   inline def info(marker: Marker, message: => String, t: Throwable): Unit =
-    if (u.isInfoEnabled(marker)) u.info(marker, message, t)
+    if u.isInfoEnabled(marker) then u.info(marker, message, t)
 
   /**
    * Logs at `DEBUG` level, if enabled.
    * @param message Log message; only constructed, if `DEBUG` level enabled.
    */
   inline def debug(message: => String): Unit =
-    if (u.isDebugEnabled) u.debug(message)
+    if u.isDebugEnabled then u.debug(message)
 
   /**
    * Logs at `DEBUG` level, if enabled.
@@ -155,7 +155,7 @@ final class Logger (u: Underlying):
    * @param t `Throwable` to be logged
    */
   inline def debug(message: => String, t: Throwable): Unit =
-    if (u.isDebugEnabled) u.debug(message, t)
+    if u.isDebugEnabled then u.debug(message, t)
 
   /**
    * Logs at `DEBUG` level, if enabled.
@@ -163,7 +163,7 @@ final class Logger (u: Underlying):
    * @param message Log message; only constructed, if `DEBUG` level enabled.
    */
   inline def debug(marker: Marker, message: => String): Unit =
-    if (u.isDebugEnabled(marker)) u.debug(marker, message)
+    if u.isDebugEnabled(marker) then u.debug(marker, message)
 
   /**
    * Logs at `DEBUG` level, if enabled.
@@ -172,14 +172,14 @@ final class Logger (u: Underlying):
    * @param t `Throwable` to be logged.
    */
   inline def debug(marker: Marker, message: => String, t: Throwable): Unit =
-    if (u.isDebugEnabled(marker)) u.debug(marker, message, t)
+    if u.isDebugEnabled(marker) then u.debug(marker, message, t)
 
   /**
    * Logs at `TRACE` level, if enabled.
    * @param message Log message; only constructed, if `TRACE` level enabled.
    */
   inline def trace(message: => String): Unit =
-    if (u.isTraceEnabled) u.trace(message)
+    if u.isTraceEnabled then u.trace(message)
 
   /**
    * Logs at `TRACE` level, if enabled.
@@ -187,7 +187,7 @@ final class Logger (u: Underlying):
    * @param t `Throwable` to be logged
    */
   inline def trace(message: => String, t: Throwable): Unit =
-    if (u.isTraceEnabled) u.trace(message, t)
+    if u.isTraceEnabled then u.trace(message, t)
 
   /**
    * Logs at `TRACE` level, if enabled.
@@ -195,7 +195,7 @@ final class Logger (u: Underlying):
    * @param message Log message; only constructed, if `TRACE` level enabled.
    */
   inline def trace(marker: Marker, message: => String): Unit =
-    if (u.isTraceEnabled(marker)) u.trace(marker, message)
+    if u.isTraceEnabled(marker) then u.trace(marker, message)
 
   /**
    * Logs at `TRACE` level, if enabled.
@@ -204,12 +204,12 @@ final class Logger (u: Underlying):
    * @param t `Throwable` to be logged.
    */
   inline def trace(marker: Marker, message: => String, t: Throwable): Unit =
-    if (u.isTraceEnabled(marker)) u.trace(marker, message, t)
+    if u.isTraceEnabled(marker) then u.trace(marker, message, t)
 
 object Logger:
 
   private def stripTrailingDollar(name: String) =
-    if (name.endsWith("$"))
+    if name.endsWith("$") then
       name.init
     else
       name
