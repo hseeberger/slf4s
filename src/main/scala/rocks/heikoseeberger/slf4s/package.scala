@@ -19,16 +19,20 @@ package rocks.heikoseeberger.slf4s
 import org.slf4j.MDC
 
 /**
- * Adds the given entries to the MDC, then evaluates the given chunck and finally removes the
- * entries again.
- * @param keyAndValue MDC entry
- * @param moreKeyAndValue more MDC entries
- * @param chunk code to be evaluated
- */
-def withMDC[A](keyAndValue: (String, String), moreKeyAndValue: (String, String)*)(chunk: => A): Unit =
+  * Adds the given entries to the MDC, then evaluates the given chunck and finally removes the
+  * entries again.
+  * @param keyAndValue
+  *   MDC entry
+  * @param moreKeyAndValue
+  *   more MDC entries
+  * @param chunk
+  *   code to be evaluated
+  */
+def withMDC[A](keyAndValue: (String, String), moreKeyAndValue: (String, String)*)(
+    chunk: => A
+): Unit =
   val map = moreKeyAndValue.toMap + keyAndValue
   try
     map.foreach(MDC.put(_, _))
     chunk
-  finally
-    map.foreach((key, _) => MDC.remove(key))
+  finally map.foreach((key, _) => MDC.remove(key))

@@ -17,13 +17,13 @@
 package rocks.heikoseeberger.slf4s
 
 /**
- * Mix-in providing a [[Logger]] member.
- */
+  * Mix-in providing a [[Logger]] member.
+  */
 transparent trait Logging:
 
   /**
-   * [[Logger]] named according to the class or object mixed into with a potential trailing "$"
-   * stripped off.
-   */
+    * [[Logger]] named according to the class or object mixed into with a potential trailing "$"
+    * stripped off.
+    */
   final protected val logger: Logger =
     Logger(getClass)

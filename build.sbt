@@ -26,8 +26,8 @@ inThisBuild(
       "-new-syntax",
     ),
     testFrameworks += new TestFramework("munit.Framework"),
-    scalafmtOnCompile := false, // TODO set to true once working for Scala 3!
-    dynverSeparator := "_",     // the default `+` is not compatible with docker tags
+    scalafmtOnCompile := true,
+    dynverSeparator := "_", // the default `+` is not compatible with docker tags
   )
 )
 
