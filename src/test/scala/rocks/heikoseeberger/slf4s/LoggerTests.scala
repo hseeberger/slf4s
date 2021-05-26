@@ -27,7 +27,7 @@ final class LoggerTests extends FunSuite:
   private val t = new Exception("error")
 
   private val marker = MarkerFactory.getMarker("marker")
-  
+
   // Error =========================================================================================
 
   test("error with message") {
