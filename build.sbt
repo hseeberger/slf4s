@@ -76,7 +76,7 @@ lazy val library =
       val logback = "1.2.3"
       val mockito = "3.11.1"
       val munit   = "0.7.26"
-      val slf4j   = "1.7.30"
+      val slf4j   = "1.7.31"
     }
     // Logging
     val slf4jApi = "org.slf4j" % "slf4j-api" % Version.slf4j
