@@ -4,9 +4,9 @@
 
 inThisBuild(
   Seq(
-    organization := "rocks.heikoseeberger",
+    organization     := "rocks.heikoseeberger",
     organizationName := "Heiko Seeberger",
-    startYear := Some(2021),
+    startYear        := Some(2021),
     licenses += ("Apache-2.0", url("http://www.apache.org/licenses/LICENSE-2.0")),
     homepage := Some(url("https://github.com/hseeberger/log4scala")),
     developers := List(
@@ -27,7 +27,7 @@ inThisBuild(
     ),
     testFrameworks += new TestFramework("munit.Framework"),
     scalafmtOnCompile := true,
-    dynverSeparator := "_", // the default `+` is not compatible with docker tags
+    dynverSeparator   := "_", // the default `+` is not compatible with docker tags
   )
 )
 
