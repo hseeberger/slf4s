@@ -73,7 +73,7 @@ lazy val library =
   new {
     object Version {
       val log4j   = "2.14.0"
-      val logback = "1.2.3"
+      val logback = "1.2.4"
       val mockito = "3.11.2"
       val munit   = "0.7.27"
       val slf4j   = "1.7.31"
