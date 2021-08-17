@@ -16,7 +16,7 @@
 
 package rocks.heikoseeberger.slf4s
 
-import org.slf4j.{ LoggerFactory, Marker, Logger => Underlying }
+import org.slf4j.{ Logger => Underlying, LoggerFactory, Marker }
 
 /**
   * Logger wrapping a SLF4J logger, applying the check-enabled-idiom to the log methods.

@@ -18,7 +18,7 @@ package rocks.heikoseeberger.slf4s
 
 import munit.FunSuite
 import org.mockito.Mockito.{ mock, never, verify, when }
-import org.slf4j.{ MarkerFactory, Logger => Underlying }
+import org.slf4j.{ Logger => Underlying, MarkerFactory }
 
 final class LoggerTests extends FunSuite:
 
