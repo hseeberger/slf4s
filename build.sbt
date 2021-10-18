@@ -17,7 +17,7 @@ inThisBuild(
         url("https://github.com/hseeberger")
       )
     ),
-    scalaVersion := "3.0.2",
+    scalaVersion := "3.1.0",
     scalacOptions ++= Seq(
       "-unchecked",
       "-deprecation",
